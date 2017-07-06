@@ -1,0 +1,17 @@
+{
+  "name": "jsontotypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "npm run build && npm run run",
+    "run": "node ./lib/main.js",
+    "build": "babel src -d lib"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

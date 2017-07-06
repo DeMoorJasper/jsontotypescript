@@ -1,0 +1,10 @@
+{
+    "test": {
+        "test2": {
+            "test3": {
+                "testString": "some test string",
+                "testInt": 0
+            }
+        }
+    }
+}
