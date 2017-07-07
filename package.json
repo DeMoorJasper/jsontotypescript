@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/main.js",
   "scripts": {
-    "start": "npm run build && npm run run",
-    "run": "node ./lib/main.js",
+    "start": "node ./lib/main.js",
+    "develop": "npm run build && npm start",
     "build": "babel src -d lib"
   },
   "devDependencies": {

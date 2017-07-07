@@ -6,17 +6,17 @@ Install dependancies
 npm i
 ```
 
-Build & Run - only for development usage
+Run the (convertor)
 ```
 npm start
 ```
 
-Build - to build to source to be able to use "npm run run"
+Build - to build to source to be able to use "npm start" (pre-built version included in git repo)
 ```
 npm run build
 ```
 
-Just run - way faster in production usage (execute npm start or npm run build first)
+Develop run - only for development usage, builds and runs
 ```
-npm run run
+npm run develop
 ```
