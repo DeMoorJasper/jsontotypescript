@@ -22,11 +22,16 @@ let writeData = (data) => {
     });
 }
 
+/* Class names should be capitalised by convention */
 let capitalize = (text) => {
     if (typeof text != "string") {
         return;
     }
     return text.length > 0 ? text[0].toUpperCase() + text.substring(1) : "";
+}
+
+let addItem = (name, dataType) => {
+    return `    ${name}: ${dataType};\n`;
 }
 
 let transpileJson = (input, name) => {
@@ -38,13 +43,13 @@ let transpileJson = (input, name) => {
     for (var property in input) {
         if (typeof input[property] == "object" && Object.prototype.toString.call(input[property]) !== '[object Array]') {
             res = Array.prototype.concat(res, transpileJson(input[property], property));
-            res[0] += `    ${property}: ${capitalize(property)};\n`;
+            res[0] += addItem(property, capitalize(property));
         } else if (Object.prototype.toString.call(input[property]) === '[object Array]') {
-            let itemName = capitalize(`${property}Item`);
-            res = Array.prototype.concat(res, transpileJson(input[property][0], itemName));
-            res[0] += `    ${property}: ${itemName};\n`;
+            let dataType = capitalize(`${property}Item`);
+            res = Array.prototype.concat(res, transpileJson(input[property][0], dataType));
+            res[0] += addItem(property, `Array<${dataType}>`);
         } else {
-            res[0] += `    ${property}: ${typeof input[property]};\n`;
+            res[0] += addItem(property, typeof input[property]);
         }
     }
 

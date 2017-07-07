@@ -1,10 +1,10 @@
 export class Input {
-    station: StationItem;
+    station: Array<StationItem>;
 }
 
 export class StationItem {
     id: string;
-    alternative: AlternativeItem;
+    alternative: Array<AlternativeItem>;
     avgStopTimes: string;
     country: string;
     latitude: string;
