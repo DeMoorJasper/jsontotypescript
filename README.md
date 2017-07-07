@@ -1,5 +1,5 @@
 # Simple JSON to TypeScript class convertor
-Usage
+*USAGE*
 
 Install dependancies
 ```
