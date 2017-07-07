@@ -1,16 +1,19 @@
-export class input {
-    test: object;
+export class Input {
+    station: StationItem;
 }
 
-export class test {
-    test2: object;
+export class StationItem {
+    id: string;
+    alternative: AlternativeItem;
+    avgStopTimes: string;
+    country: string;
+    latitude: string;
+    longitude: string;
+    name: string;
+    standardname: string;
 }
 
-export class test2 {
-    test3: object;
-}
-
-export class test3 {
-    testString: string;
-    testInt: number;
+export class AlternativeItem {
+    @language: string;
+    @value: string;
 }
